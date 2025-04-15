@@ -486,7 +486,6 @@ body.js-active {
   width: 90%;
 }
 .header_hamburger {
-  display: none;
   height: 20px;
   position: relative;
 }
@@ -686,6 +685,39 @@ body.js-active {
     width: 100%;
   }
 }
+.nav-bar .button-contact svg {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--secondary-color);
+  margin-right: 0.8rem;
+}
+
+.nav-sp {
+  display: none;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .nav-sp {
+    display: flex;
+  }
+}
+.nav-sp_item:not(:last-child) {
+  margin-right: 2.4rem;
+}
+.nav-sp_link {
+  width: 4rem;
+  height: 4rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-sp_link svg {
+  color: var(--secondary-color);
+  width: 2.6rem;
+  height: 2.6rem;
+}
 
 .accordion-header {
   width: 100%;
@@ -788,7 +820,6 @@ a {
   padding: 1.6rem 3.2rem;
   color: var(--secondary-color);
   border: 2px solid var(--primary-color);
-  background: var(--primary-color);
   border-radius: 0.8rem;
   font-weight: bold;
   font-size: 1.4rem;
@@ -817,7 +848,7 @@ a {
   transform: scaleX(1);
   transform-origin: left;
 }
-.button:hover .arrow {
+.button:hover svg {
   stroke: #ab0b0b;
 }
 .button-primary {
@@ -1428,9 +1459,8 @@ canvas {
 .business02 .card-bg-link:hover .icon-button .arrow {
   stroke: var(--secondary-color);
 }
-.business02-button {
-  margin: 0 auto;
-  margin-top: 8rem;
+.business02 .button::before {
+  background: var(--text-primary);
 }
 
 .test-content {
@@ -1593,6 +1623,9 @@ canvas {
   .technology04 .button {
     margin-top: 0;
   }
+}
+.technology04 .button::before {
+  background: var(--text-primary);
 }
 
 .products {
